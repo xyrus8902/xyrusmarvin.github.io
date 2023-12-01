@@ -87,12 +87,47 @@ main {
 }
 
 .card-img-top {
-    max-height: 200px;
-    object-fit: cover;
+    max-height: 50%;
+    max-height: 25%;
+    object-fit:fill;
 }
 
 button {
     margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; /* Make the background transparent initially */
+    border: none; /* Remove border for a cleaner look */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Add transitions for color, background color, and transform */
+}
+
+button::before,
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 52px; /* Adjust the width to shape the heart */
+    height: 80px; /* Adjust the height to shape the heart */
+    background: #28a745; /* Set the background color to the button color */
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    transform-origin: 50% 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+button::after {
+    left: 30px; /* Adjust the left position for the right side of the heart */
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+}
+
+button:hover {
+    color: #fff; /* Change text color on hover */
+}
+
+button:hover::before,
+button:hover::after {
+    transform: rotate(0);
 }
 
 @keyframes slideUp {
@@ -135,13 +170,13 @@ button {
 
     <main class="mt-1">
         <div class="card">
-            <img src="https://via.placeholder.com/600x200" class="card-img-top" alt="Sample Image">
+            <img src="imgs/1st.jpg" class="card-img-top" alt="Sample Image">
             <div class="card-body">
-                <h2 class="card-title">Have you eaten?</h2>
-                <p class="card-text"> 
+                <h2 class="card-title">Good Eveningg, nagdinner kana?</h2>
+                <p class="card-text"> Ganda mo here!
                   </p>
-                <button class="btn btn-success" onclick="confirmYes()">Yes</button>
-                <button class="btn btn-danger" onclick="confirmNo()">No</button>
+                <a class="btn btn-success" href="2nd.html">Good Eve din, yes po.</a>
+                <a class="btn btn-danger" onclick="confirmNo()">Utut</a>
             </div>
         </div>
     </main>
@@ -155,7 +190,7 @@ button {
         }
 
         function confirmNo() {
-            alert('It might be a good idea to have a meal. Take care of yourself!');
+            alert('Utut mo rin, click mo yung green ako batas dito HAHAHAH');
         }
     </script>
 </body>
