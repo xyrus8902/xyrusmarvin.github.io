@@ -228,10 +228,10 @@
           
           Swal.fire({
             title: 'Redirecting...',
-            html: `We will go to <strong>${folderName}</strong>`,
+            html: `We will go to our <strong>${folderName}</strong>`,
             icon: 'info',
             showConfirmButton: false, // Hide the "Confirm" button
-            timer: 2000, // Auto-close after 2 seconds (2000 milliseconds)
+            timer: 2500, // Auto-close after 2 seconds (2000 milliseconds)
             timerProgressBar: true,
             didOpen: () => {
               Swal.showLoading(); // Show a loading indicator
@@ -249,7 +249,7 @@
       // Hide the welcome modal after 3 seconds
       setTimeout(() => {
         welcomeModal.hide();
-      }, 5000);
+      }, 3500);
     });
 
     // Toggle visibility of the hidden card
