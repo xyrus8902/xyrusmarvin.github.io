@@ -65,6 +65,12 @@
 </head>
 <body>
 
+  <!-- Audio element -->
+  <audio id="myAudio">
+    <source src="audio/palagi.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
 <div class="container">
   <h1 class="gallery-title">1st Month of Love</h1><hr>
   
@@ -329,5 +335,19 @@
   </div>
 </div>
 
+<script>
+   // Get the audio element
+  var audio = document.getElementById("myAudio");
+
+// When audio can play through, start playing
+audio.addEventListener("canplaythrough", function() {
+  audio.play();
+});
+
+// Fallback for browsers that don't support 'canplaythrough'
+audio.addEventListener("loadeddata", function() {
+  audio.play();
+});
+</script>
 </body>
 </html>
