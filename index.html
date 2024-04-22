@@ -10,6 +10,7 @@
   <!-- SweetAlert CSS -->
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   
 
   <style>
@@ -18,6 +19,9 @@
     /* Custom Styles */
     body {
       background-color: rgb(144, 101, 144); /* Violet background color for the body */
+    }
+    .animated-card {
+      animation-duration: 1s;
     }
     /* Custom Styles */
     .scrollable-column {
@@ -119,7 +123,7 @@
   <div class="modal" id="welcomeModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-body text-center">
+        <div class="modal-body animate__jackInTheBox text-center">
           <h5>Welcome to our Gallery Babyy</h5>
           <p>This will reminds us our memories together, iloveyouu <i class="fas fa-heart"></i></p>
         </div>
@@ -144,7 +148,7 @@
         </a>
       </div>
       </div>
-        <div class="card shadow" id="hiddenCard" style="background-color: rgba(255, 255, 255, 0.5);">
+        <div class="card animate__animated animate__fadeInDown animated-card shadow" id="hiddenCard" style="background-color: rgba(255, 255, 255, 0.5);">
           <div class="card-body">
             <div class="mt-2">
               <img src="loveyouu.jpg" alt="Your Image" class="img-fluid" style="width: 300px; height: 400px;">

@@ -7,6 +7,9 @@
   <link rel="icon" href="loveyouu.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
   <style>
     body {
       background-color: #4d9dec;
@@ -18,17 +21,22 @@
     }
 
     .card {
-      border: none;
-      transition: transform 0.3s ease;
-    }
+  border: none;
+  transition: transform 0.3s ease, opacity 0.5s ease, top 0.5s ease;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+}
     
     .card-headd {
         background-color: aquamarine;
     }
 
-    .card:hover {
-        transform: scale(1.05);
-    }
+    .card:hover,
+.card.fade-in {
+  top: 0;
+  opacity: 1;
+}
 
     .card-img-top {
       height: 250px;
@@ -72,11 +80,17 @@
   </audio>
 
 <div class="container">
-  <h1 class="gallery-title">1st Month of Love</h1><hr>
+  <!-- Back Button -->
+<!-- Back Icon Link -->
+<a href="index.html" class="text-dark">
   
+
+  <h1 class="gallery-title">1st Month of Love</h1><hr>
+  <i class="fas fa-arrow-left"></i>
+</a>
   <div class="row mt-4">
-    <div class="col-md-4 mb-3">
-      <div class="card card-headd">
+    <div class="col-md-6 mb-3">
+      <div class="card shadow-lg card-headd">
         <div class="row g-0">
           <div class="col-md-6 col-12">
             <img src="img/dec3b.jpg" class="card-img-top" alt="Image" data-bs-toggle="modal" data-bs-target="#imageModal">
@@ -90,7 +104,7 @@
         </div>
       </div>
     </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-6 mb-3">
           <div class="card card-headd">
             <div class="row g-0">
               <div class="col-md-6 col-12">
@@ -105,38 +119,6 @@
             </div>
           </div>
         </div>
-    
-    <div class="col-md-4 mb-3">
-      <div class="card card-headd">
-        <div class="row g-0">
-          <div class="col-md-6">
-            <img src="https://via.placeholder.com/800x500" class="card-img-top" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title">Image 2</h5>
-              <p class="card-text card-description">Description for Image 2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4 mb-3">
-      <div class="card card-headd">
-        <div class="row g-0">
-          <div class="col-md-6">
-            <img src="https://via.placeholder.com/800x500" class="card-img-top" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title">Image 3</h5>
-              <p class="card-text card-description">Description for Image 3</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Add more columns for additional images -->
   </div>
 </div>
@@ -305,36 +287,6 @@
   </div>
 </div>
 
-<div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModal2Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal2Label">Image 2</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://via.placeholder.com/800x500" class="img-fluid" alt="Image 2">
-        <p>Description for Image 2</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal3Label">Image 3</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://via.placeholder.com/800x500" class="img-fluid" alt="Image 3">
-        <p>Description for Image 3</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
    // Get the audio element
   var audio = document.getElementById("myAudio");
@@ -348,6 +300,38 @@ audio.addEventListener("canplaythrough", function() {
 audio.addEventListener("loadeddata", function() {
   audio.play();
 });
+</script>
+
+<!-- JavaScript for card animations -->
+<script>
+  // Function to check if an element is in viewport
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle card animations
+  function handleCardAnimations() {
+    var cards = document.querySelectorAll('.card');
+    cards.forEach(function(card) {
+      if (isInViewport(card)) {
+        card.classList.add('fade-in');
+      }
+    });
+  }
+
+  // Initial check for card animations on page load
+  handleCardAnimations();
+
+  // Listen for scroll events and check for card animations
+  window.addEventListener('scroll', function() {
+    handleCardAnimations();
+  });
 </script>
 </body>
 </html>
