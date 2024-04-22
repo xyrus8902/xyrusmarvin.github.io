@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>December</title>
+  <title>January 2024</title>
   <link rel="icon" href="loveyouu.jpg">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
   <style>
+    * {
+      font-size: 14px;
+    }
     body {
-      background-color: #4d9dec;
+      background-image: url('img/index.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* This keeps the background fixed while scrolling */
+      background-position: center center;
+      
     }
 
     .gallery-title {
@@ -18,17 +29,22 @@
     }
 
     .card {
-      border: none;
-      transition: transform 0.3s ease;
-    }
+  border: none;
+  transition: transform 0.3s ease, opacity 0.5s ease, top 0.5s ease;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+}
     
     .card-headd {
         background-color: aquamarine;
     }
 
-    .card:hover {
-        transform: scale(1.05);
-    }
+    .card:hover,
+.card.fade-in {
+  top: 0;
+  opacity: 1;
+}
 
     .card-img-top {
       height: 250px;
@@ -65,74 +81,71 @@
 </head>
 <body>
 
+  <!-- Audio element -->
+  <audio id="myAudio">
+    <source src="audio/palagi.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
 <div class="container">
-  <h1 class="gallery-title">1st Month of Love</h1><hr>
+  <!-- Back Button -->
+<!-- Back Icon Link -->
+
   
-  <div class="row mt-4">
-    <div class="col-md-4 mb-3">
-      <div class="card card-headd">
-        <div class="row g-0">
-          <div class="col-md-6 col-12">
-            <img src="img/dec3b.jpg" class="card-img-top" alt="Image" data-bs-toggle="modal" data-bs-target="#imageModal">
-          </div>
-          <div class="col-md-6 col-12">
-            <div class="card-body">
-              <h5 class="card-title">December 8</h5>
-              <p class="card-text card-description">First Meet natin, medyo mahiyain pa sa sobrang mahiyain nagholding hands lang HAHAHA</p>
-            </div>
+
+  <h4 class="gallery-title text-light">2nd Month of Love (January 2024) </h4><hr>
+  <a href="index.html" class="text-light">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<div class="row mt-4 px-4 my-3">
+  <div class="col-md-6 mb-3">
+    <div class="card card-headd">
+      <div class="row g-0">
+        <div class="col-md-6 col-12">
+          <img src="img/jan5d.jpg" class="card-img-top" alt="Image" data-bs-toggle="modal" data-bs-target="#imageModal">
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="card-body">
+            <h5 class="card-title">January 5</h5><hr>
+            <p class="card-text card-description">First Meet natin, medyo mahiyain pa sa sobrang mahiyain nagholding hands lang HAHAHA</p>
           </div>
         </div>
       </div>
     </div>
-        <div class="col-md-4 mb-3">
-          <div class="card card-headd">
-            <div class="row g-0">
-              <div class="col-md-6 col-12">
-                <img src="img/dec8j.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="card-body">
-                  <h5 class="card-title">December 8</h5>
-                  <p class="card-text card-description">Jollibee tapos ano kumain AHAHAHA</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-    <div class="col-md-4 mb-3">
-      <div class="card card-headd">
-        <div class="row g-0">
-          <div class="col-md-6">
-            <img src="https://via.placeholder.com/800x500" class="card-img-top" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title">Image 2</h5>
-              <p class="card-text card-description">Description for Image 2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4 mb-3">
-      <div class="card card-headd">
-        <div class="row g-0">
-          <div class="col-md-6">
-            <img src="https://via.placeholder.com/800x500" class="card-img-top" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
-          </div>
-          <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title">Image 3</h5>
-              <p class="card-text card-description">Description for Image 3</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Add more columns for additional images -->
   </div>
+  <div class="col-md-6 mb-3">
+    <div class="card shawdow card-headd">
+      <div class="row g-0">
+        <div class="col-md-6 col-12">
+          <img src="img/jan11e.jpg" class="card-img-top" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="card-body">
+            <h5 class="card-title">January 11</h5><hr>
+            <p class="card-text card-description">Jollibee tapos ano kumain AHAHAHA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <div class="card shawdow card-headd">
+      <div class="row g-0">
+        <div class="col-md-6 col-12">
+          <img src="img/dec8j.jpg" class="card-img-top" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="card-body">
+            <h5 class="card-title">January 22</h5><hr>
+            <p class="card-text card-description">Jollibee tapos ano kumain AHAHAHA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more columns for additional images -->
+</div>
 </div>
 
 <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
@@ -141,193 +154,280 @@
 
 <!-- Modals for each image -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModal2Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="imageModal2Label">December 3</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3.jpg" class="card-img-top" alt="Card 1">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3a.jpg" class="card-img-top" alt="Card 2">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3b.jpg" class="card-img-top" alt="Card 3">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3c.jpg" class="card-img-top" alt="Card 4">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3d.jpg" class="card-img-top" alt="Card 5">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3e.jpg" class="card-img-top" alt="Card 6">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec3f.jpg" class="card-img-top" alt="Card 7">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <p>Description for Image 2</p>
-        </div>
-      </div>
+<div class="modal-dialog modal-xl">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="imageModal2Label">January 5, 2024</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-  </div>
-
-<div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal1Label">December 8, 2023</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8.jpg" class="card-img-top" alt="Card 1">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8a.jpg" class="card-img-top" alt="Card 2">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8b.jpg" class="card-img-top" alt="Card 3">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8c.jpg" class="card-img-top" alt="Card 4">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8d.jpg" class="card-img-top" alt="Card 5">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8e.jpg" class="card-img-top" alt="Card 6">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8f.jpg" class="card-img-top" alt="Card 7">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8g.jpg" class="card-img-top" alt="Card 8">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <img src="img/dec8h.jpg" class="card-img-top" alt="Card 9">
-                <div class="card-body">
-                  <!-- You can add any content here if needed -->
-                </div>
-              </div>
+    <div class="modal-body">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5.jpg" class="card-img-top" alt="Card 1">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
             </div>
           </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5a.jpg" class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5b.jpg" class="card-img-top" alt="Card 3">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5c.jpg" class="card-img-top" alt="Card 4">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5d.jpg" class="card-img-top" alt="Card 5">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5e.jpg" class="card-img-top" alt="Card 6">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5f.jpg" class="card-img-top" alt="Card 7">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan5g.jpg" class="card-img-top" alt="Card 7">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+</div>
 
+<div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="imageModal1Label">January 11, 2024</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11.jpg" class="card-img-top" alt="Card 1">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11a.jpg" class="card-img-top" alt="Card 2">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11b.jpg" class="card-img-top" alt="Card 3">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11c.jpg" class="card-img-top" alt="Card 4">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11d.jpg" class="card-img-top" alt="Card 5">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11e.jpg" class="card-img-top" alt="Card 6">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11f.jpg" class="card-img-top" alt="Card 7">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="img/jan11g.jpg" class="card-img-top" alt="Card 8">
+            <div class="card-body">
+              <!-- You can add any content here if needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modals for each image -->
 <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModal2Label" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="imageModal2Label">Image 2</h5>
+        <h5 class="modal-title" id="imageModal2Label">January 22, 2024</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="https://via.placeholder.com/800x500" class="img-fluid" alt="Image 2">
-        <p>Description for Image 2</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3.jpg" class="card-img-top" alt="Card 1">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3a.jpg" class="card-img-top" alt="Card 2">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3b.jpg" class="card-img-top" alt="Card 3">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3c.jpg" class="card-img-top" alt="Card 4">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3d.jpg" class="card-img-top" alt="Card 5">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3e.jpg" class="card-img-top" alt="Card 6">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="img/dec3f.jpg" class="card-img-top" alt="Card 7">
+              <div class="card-body">
+                <!-- You can add any content here if needed -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="imageModal3Label">Image 3</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="https://via.placeholder.com/800x500" class="img-fluid" alt="Image 3">
-        <p>Description for Image 3</p>
-      </div>
-    </div>
   </div>
-</div>
 
+<script>
+   // Get the audio element
+  var audio = document.getElementById("myAudio");
+
+// When audio can play through, start playing
+audio.addEventListener("canplaythrough", function() {
+  audio.play();
+});
+
+// Fallback for browsers that don't support 'canplaythrough'
+audio.addEventListener("loadeddata", function() {
+  audio.play();
+});
+</script>
+
+<!-- JavaScript for card animations -->
+<script>
+  // Function to check if an element is in viewport
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle card animations
+  function handleCardAnimations() {
+    var cards = document.querySelectorAll('.card');
+    cards.forEach(function(card) {
+      if (isInViewport(card)) {
+        card.classList.add('fade-in');
+      }
+    });
+  }
+
+  // Initial check for card animations on page load
+  handleCardAnimations();
+
+  // Listen for scroll events and check for card animations
+  window.addEventListener('scroll', function() {
+    handleCardAnimations();
+  });
+</script>
 </body>
 </html>
