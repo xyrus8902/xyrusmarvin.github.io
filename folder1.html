@@ -297,18 +297,20 @@
 </div>
 
 <script>
-   // Get the audio element
+  // Get the audio element
   var audio = document.getElementById("myAudio");
 
-// When audio can play through, start playing
-audio.addEventListener("canplaythrough", function() {
-  audio.play();
-});
+  // When audio can play through, start playing
+  audio.addEventListener("canplaythrough", function() {
+    audio.volume = 0.1; // Set volume to 50%
+    audio.play();
+  });
 
-// Fallback for browsers that don't support 'canplaythrough'
-audio.addEventListener("loadeddata", function() {
-  audio.play();
-});
+  // Fallback for browsers that don't support 'canplaythrough'
+  audio.addEventListener("loadeddata", function() {
+    audio.volume = 0.1; // Set volume to 50%
+    audio.play();
+  });
 </script>
 
 <!-- JavaScript for card animations -->
